@@ -52,8 +52,9 @@ document.querySelector('.check').addEventListener('click',(e) => {
 });
 
 document.querySelector('.again').addEventListener('click',function() {
-    score = 0;
+    score = 20;
     random = randomNumber(20);
     document.querySelector('body').style.backgroundColor = 'black';
     updateScores();
+    document.querySelector('.message').textContent = `Start guessing...`;
 });
