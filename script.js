@@ -15,12 +15,20 @@ function checkWinner(guess) {
     } else {
         if(guess < random) {
             text = `Too small!`;
-            if(score >=1)
+            if(score > 1)
                 score--;
+            else {
+                text = `Game Over!`;
+                score--;
+            }
         } else if(guess > random) {
             text = `Too big!`;
-            if(score >=1)
+            if(score > 1)
                 score--;
+            else {
+                text = `Game Over!`;
+                score--;
+            }
         } else {
             text = `Winner!`;
             if(score >= highscore)
